@@ -8,25 +8,25 @@
     <style>
         /* Hier kun je je eigen CSS stijl toevoegen */
        /* Hier kun je je eigen CSS stijl toevoegen */
-       body {
-        font-family: 'Roboto', sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #d4f1d4; /* Dit is een zachte groentint */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d4f1d4;
         }
         .container {
             max-width: 1200px;
             margin: 0 auto;
         }
         .header {
-            background-color: #ffc0cb; /* Dit is een roze kleur */
+            background-color: #ffc0cb;
             padding: 20px;
             text-align: center;
         }
         .header h1 {
             font-size: 48px;
             margin: 0;
-            color: hotpink;
+            color: hotpink; /* Dit is een andere roze kleur */
         }
         .header p {
             font-size: 24px;
@@ -47,29 +47,37 @@
             background-color: #555555;
         }
         .main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
             padding: 20px;
         }
-        .main h2 {
-            font-size: 32px;
-            margin: 0 0 20px 0;
+        .main .card {
+            width: 30%;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px 0 rgba(255,105,180,0.2); /* Dit is een roze schaduw */
         }
-        .main form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .main .card img {
+            width: 100%;
+            height: auto;
         }
-        .main form input, .main form textarea {
-            width: 80%;
+        .main .card .content {
             padding: 10px;
-            margin: 10px 0;
-            border: none;
-            box-shadow: inset 0 2px 4px 0 rgba(0,0,0,0.1);
         }
-        .main form input[type=submit] {
-            width: 40%;
-            background-color: hotpink;
-            color: white;
-            cursor: pointer;
+        .main .card .content h3 {
+            font-size: 20px;
+            margin: 0;
+        }
+        .main .card .content p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .main .card .content a {
+            color: blue;
+            text-decoration: none;
+        }
+        .main .card .content a:hover {
+            text-decoration: underline;
         }
         .footer {
             background-color: #f0f0f0;
@@ -87,7 +95,7 @@
         <div class="nav">
             <a href="#">Home</a>
             <a href="#">Over mij</a>
-            <a href="blog.html">Blog</a>
+            <a href="#">Blog</a>
             <a href="#">Contact</a>
         </div>
         <div class="main">
