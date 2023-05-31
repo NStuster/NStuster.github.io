@@ -1,1 +1,136 @@
-Hello World Nikki
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikki Stuster</title>
+    <style>
+        /* Hier kun je je eigen CSS stijl toevoegen */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+        .header p {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #333333;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+        }
+        .nav a:hover {
+            background-color: #555555;
+        }
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .main .card {
+            width: 30%;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+        .main .card img {
+            width: 100%;
+            height: auto;
+        }
+        .main .card .content {
+            padding: 10px;
+        }
+        .main .card .content h3 {
+            font-size: 20px;
+            margin: 0;
+        }
+        .main .card .content p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .main .card .content a {
+            color: blue;
+            text-decoration: none;
+        }
+        .main .card .content a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Nikki Stuster</h1>
+            <p>Welkom op mijn webpagina met animatie</p>
+        </div>
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">Over mij</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="main">
+                <!-- Hier kun je je eigen animatie-effecten toevoegen met JavaScript of CSS -->
+                <!-- Dit is een voorbeeld van een card design met een afbeelding, een titel, een tekst en een link -->
+                <div class="card">
+                    <img src="https://source.unsplash.com/random/300x200" alt="Random image">
+                    <div class="content">
+                        <h3>Youtube</h3>
+                        <p>Dit is mijn youtube kanaal waar ik video's deel over mijn interesses en hobby's.</p>
+                        <a href="#">Bekijk mijn kanaal</a>
+                    </div>
+                </div>
+
+                <!-- Dit is een ander voorbeeld van een card design met een andere afbeelding, titel, tekst en link -->
+                <div class="card">
+                    <img src="https://source.unsplash.com/random/300x200" alt="Random image">
+                    <div class="content">
+                        <h3>Github</h3>
+                        <p>Dit is mijn github account waar ik mijn code en projecten deel.</p>
+                        <a href="#">Bekijk mijn account</a>
+                    </div>
+                </div>
+
+                <!-- Dit is nog een voorbeeld van een card design met weer een andere afbeelding, titel, tekst en link -->
+                <div class="card">
+                    <img src="https://source.unsplash.com/random/300x200" alt="Random image">
+                    <div class="content">
+                        <h3>Andere kanalen</h3>
+                        <p>Dit zijn enkele andere kanalen waar je me kunt volgen of contact met me kunt opnemen.</p>
+                        <a href="#">Bekijk mijn kanalen</a>
+                    </div>
+                </div>
+    </div>
+    <div class="footer">
+        © Nikki Stuster - Alle rechten voorbehouden
+    </div>
+</div>
+
+</body>
+</html>
+
