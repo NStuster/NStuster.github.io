@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bestel een pizza</title>
+        <link href="css/style.css" type="text/css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <form action="mailto:nikki.stuster@student.hogent.be?subject=formulierinhoud" method="post" autocomplete="on">
+            <!-- <form action="order.php" method="post" autocomplete="on">  wij gebruiken mailto voor debug-->
+            <fieldset>
+                <legend>Login</legend>
+                <div>
+                    <label for="firstname">Voornnaam</label> <input type="text" name="fname" id="firstname" placeholder="voornaam" autofocus>
+                    <!-- autofocus voor focus op dit veld -->
+                </div>
+                <div>
+                    <label for="fpasswd">Paswoord </label><input type="password" name="fpasswd" id="fpasswd">
+                </div>
+            </fieldset>
+            <!-- fieldset geeft geen funtionaliteit is puur opmaak -->
+            <div><label for="fdate">Datum </label><input type="date" name="fdate" id="fdate"></div>
+            <div><label for="fmail">E-mail </label><input type="email" name="fmail" id="fmail" required></div>
+            <!-- requered zorgt dat diet veld verplicht wordt -->
+            <div><label for="fnumber">Nummer </label><input type="number" name="fnumber" id="fnumber" min="1" max="10"></div>
+            <!-- min en max zijn opiets voor een minimum en een maximum -->
+
+            <div>
+                <input type="radio" name="tijdstip" id="16u" value="1618">
+                <label for="16u">16-18u</label>
+                <input type="radio" name="tijdstip" id="18u" value="1820">
+                <label for="18u">18-20u</label>
+                <input type="radio" name="tijdstip" id="20u" value="2024">
+                <label for="20u">20-24u</label>
+            </div>
+            <!-- radiobuttons steeds dezelfde naam genruiken om te groeperen -->
+
+            <div>
+                <label for="pet-select">Choose a pet:</label>
+
+                <select name="pets" id="pet-select">
+                <option value="">--Please choose an option--</option>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="hamster">Hamster</option>
+                <option value="parrot">Parrot</option>
+                <option value="spider">Spider</option>
+                <option value="goldfish">Goldfish</option>
+                </select>
+            </div>
+
+           
+            <div><input type="submit" value="Verzenden"></div>
+            <!-- type submit verzend het formulier -->
+            <!-- verzend alles binnen eigen form element -->
+        </form>
+    </body>
+
+</html>

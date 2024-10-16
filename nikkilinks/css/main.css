@@ -1,0 +1,36 @@
+/* Zorgt voor een klassieke terminal look */
+body {
+    background-color: black; /* Zwarte achtergrond */
+    color: limegreen; /* Groene tekstkleur zoals in oude terminals */
+}
+
+main {
+    padding: 20px; /* Pas de padding aan zoals je wilt */
+}
+
+p {
+    line-height: 1.6; /* Optioneel, voor betere leesbaarheid */
+}
+
+pre {
+    font-family: monospace;
+    font-size: 16px;
+    line-height: 1;
+    color: limegreen; /* Zorgt voor groene tekst in het ASCII-gebied */
+}
+
+.ascii-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+.col {
+    width: 100px; /* Pas dit aan naar wens */
+    padding: 10px; /* Optioneel, voor meer ruimte binnen de cellen */
+}
