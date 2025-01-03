@@ -109,5 +109,9 @@ a:active {
     .TitelKlein {
         display: block; /* Toon .TitelKlein bij schermen kleiner dan 500px */
     }
+
+    .Linkframe{
+        display: block;
+    }
 }
 
