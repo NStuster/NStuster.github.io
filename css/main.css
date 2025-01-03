@@ -2,6 +2,8 @@
 body {
     background-color: black; /* Zwarte achtergrond */
     color: limegreen; /* Groene tekstkleur zoals in oude terminals */
+    font-family: monospace;
+    text-shadow: 0 0 5px #00ff00;
 }
 
 main {
@@ -28,9 +30,84 @@ pre {
 nav {
     display: flex;
     justify-content: center;
+    font-size: x-large;
+}
+
+a {
+    color: #00ff00; /* Standaard groen */
+    text-decoration: none; /* Geen onderstreping voor terminal-look */
+}
+
+a:visited {
+    color: #00cc00; /* Iets donkerder groen na klikken */
+}
+
+a:hover {
+    color: #33ff33; /* Lichter groen bij hover */
+    text-shadow: 0 0 5px #33ff33; /* Gloei-effect bij hover */
+}
+
+a:active {
+    color: #009900; /* Nog donkerder groen bij klikken */
 }
 
 .col {
     width: 100px; /* Pas dit aan naar wens */
     padding: 10px; /* Optioneel, voor meer ruimte binnen de cellen */
 }
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+.cursor {
+    display: inline-block;
+    background-color: #00ff00;
+    width: 10px;
+    height: 20px;
+    animation: blink 0.6s infinite;
+}
+
+.terminal {
+    width: 80ch; /* Breedte zoals een oude terminal */
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #00ff00;
+    box-shadow: 0 0 10px #00ff00;
+    overflow-y: auto;
+    height: 400px;
+}
+
+.Linkframe{
+    display: block flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex: 1 1 0;
+    /* display: block; */ /* in mobile modus */
+
+    padding: 15px;
+}
+
+.Linkframe > *{
+
+    margin: 15px;
+    height: 300px;
+    padding: 0px 15px 15px 15px;
+}
+
+.TitelKlein {
+    display: none; /* Verberg .TitelKlein standaard */
+}
+
+@media (max-width: 700px) {
+    .TitelGroot {
+        display: none; /* Verberg het element bij schermbreedte kleiner dan 500px */
+    }
+    .TitelKlein {
+        display: block; /* Toon .TitelKlein bij schermen kleiner dan 500px */
+    }
+}
+
