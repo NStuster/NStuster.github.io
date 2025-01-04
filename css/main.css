@@ -33,6 +33,14 @@ nav {
     font-size: x-large;
 }
 
+.nav-list {
+    display: flex;
+    list-style: none; /* Verwijdert standaard opsommingstekens */
+    padding: 0;
+    margin: 0;
+    gap: 20px; /* Gelijke ruimte tussen items */
+}
+
 a {
     color: #00ff00; /* Standaard groen */
     text-decoration: none; /* Geen onderstreping voor terminal-look */
