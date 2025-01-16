@@ -59,6 +59,7 @@ pre {
 .TitelKlein {
     display: none; /* Verberg .TitelKlein standaard */
     grid-area: d;
+    font-size: 200%;
 }
 nav {
     display: flex;
@@ -72,6 +73,25 @@ nav {
     padding: 0;
     margin: 0;
     gap: 20px; /* Gelijke ruimte tussen items */
+}
+
+.nav-list-Hamburger{
+    display: grid;
+    grid-template-rows: 1;
+    font-size: x-large;
+    text-align: center;
+    text-align: center;
+    width: 100%;
+}
+
+.nav-list-Hamburger {
+    width: 100%;
+    list-style-type: none;
+}
+
+.col1 {
+    width: 100%;
+    padding: 10px;
 }
 
 a {
@@ -135,10 +155,16 @@ a:active {
 .Linkframe > *{
 
     margin: 15px;
-    height: 300px;
-    padding: 0px 15px 15px 15px;
+    height: 100%;
+    padding: 20px 15px 15px 15px;
 }
 
+.Linkframe > div > h2{
+    font-size: 200% ;
+    margin: 15px;
+    height: 100%;
+    padding: 0px 15px 15px 15px;
+}
 
 
 /*hamburegermenu*/
@@ -148,11 +174,11 @@ a:active {
     position: absolute; /* Absolute positionering ten opzichte van de dichtstbijzijnde relatief gepositioneerde ouder */
     top: 50px; /* Afstand van de bovenkant van de .Hambugermenu */
     left: 0; /* Lijn uit aan de linkerkant van de .Hambugermenu */
-    width: 100%; /* Neem de volledige breedte van .Hambugermenu */
+    width: calc(100% - 6px ); /* Neem de volledige breedte van .Hambugermenu */
     background: black; /* Achtergrondkleur, optioneel */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Een schaduw voor betere zichtbaarheid, optioneel */
     z-index: 1000; /* Zorg dat het menu boven andere inhoud verschijnt */
-    border: solid 3px white;
+    border: solid 3px limegreen;
 }
 
 .menu-toggle {
@@ -171,6 +197,13 @@ a:active {
 }
 
 @media (max-width: 700px) {
+    * {
+        font-size: 110%;
+    }
+    .Linkframe > div > * {
+        margin-top: 15px;
+        font-size: 150%;
+    }
     .title {
         display: none; /* Verberg het element bij schermbreedte kleiner dan 700px */
     }
