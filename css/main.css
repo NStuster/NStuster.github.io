@@ -141,6 +141,35 @@ a:active {
 
 
 
+/*hamburegermenu*/
+
+.MobileMenu {
+    display: none;
+    position: absolute; /* Absolute positionering ten opzichte van de dichtstbijzijnde relatief gepositioneerde ouder */
+    top: 50px; /* Afstand van de bovenkant van de .Hambugermenu */
+    left: 0; /* Lijn uit aan de linkerkant van de .Hambugermenu */
+    width: 100%; /* Neem de volledige breedte van .Hambugermenu */
+    background: black; /* Achtergrondkleur, optioneel */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Een schaduw voor betere zichtbaarheid, optioneel */
+    z-index: 1000; /* Zorg dat het menu boven andere inhoud verschijnt */
+    border: solid 3px white;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Styling voor het menu label dat als hamburger icoon dient */
+.menu-icon {
+    cursor: pointer;
+    display: block; /* Zorg dat het label als een blok element wordt weergegeven */
+}
+
+/* Toon en verberg het navigatiemenu wanneer de checkbox is aangevinkt */
+.menu-toggle:checked ~ .MobileMenu {
+    display: flex;
+}
+
 @media (max-width: 700px) {
     .title {
         display: none; /* Verberg het element bij schermbreedte kleiner dan 700px */
