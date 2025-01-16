@@ -14,6 +14,32 @@ p {
     line-height: 1.6; /* Optioneel, voor betere leesbaarheid */
 }
 
+.LogoMenuGrid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    Grid-template-areas: 
+            "a a a a b"
+            ". c d . .";
+    justify-content: stretch;
+    align-content: start; 
+    width: 100%;
+}
+
+.MobileMenu{
+    grid-area: a;
+
+}
+.Hambugermenu{
+    display: none;
+    grid-area: b;
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    padding: 10px;
+} 
+.hamburgerImg {
+    width: 30px;
+}
 pre {
     font-family: monospace;
     font-size: 16px;
@@ -21,12 +47,19 @@ pre {
     color: limegreen; /* Zorgt voor groene tekst in het ASCII-gebied */
 }
 
-.ascii-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.ascii-art{
+    grid-area: c;
+    width: 150px;
+    justify-self: center;
 }
-
+.title{
+    align-self: start;
+    grid-area: d;
+}
+.TitelKlein {
+    display: none; /* Verberg .TitelKlein standaard */
+    grid-area: d;
+}
 nav {
     display: flex;
     justify-content: center;
@@ -106,20 +139,24 @@ a:active {
     padding: 0px 15px 15px 15px;
 }
 
-.TitelKlein {
-    display: none; /* Verberg .TitelKlein standaard */
-}
+
 
 @media (max-width: 700px) {
-    .TitelGroot {
-        display: none; /* Verberg het element bij schermbreedte kleiner dan 500px */
+    .title {
+        display: none; /* Verberg het element bij schermbreedte kleiner dan 700px */
     }
     .TitelKlein {
-        display: block; /* Toon .TitelKlein bij schermen kleiner dan 500px */
+        display: block; /* Toon .TitelKlein bij schermen kleiner dan 700px */
     }
-
+    .Hambugermenu{
+        display: block;
+    }
     .Linkframe{
         display: block;
     }
+    nav{
+        display: none;
+    }
+
 }
 
