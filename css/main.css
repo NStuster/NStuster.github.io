@@ -223,3 +223,41 @@ a:active {
 
 }
 
+.typewriter > p{
+    font-size: llarger;
+}
+
+/* Container voor het typewriter-effect */
+.typewriter {
+    /* Eventueel centreren */
+    width: fit-content;
+    margin: 0 auto;
+    /* Zorgen dat we niet naar de volgende regel springen */
+    white-space: nowrap;
+    /* Zorg dat tekst verborgen wordt buiten de breedte */
+    overflow: hidden;
+    /* Dit is de breedte die de animatie uiteindelijk moet krijgen (aantal tekens) */
+    width: 100%; /* Pas aan naar het aantal tekens dat je hebt */
+     border-right: 2px solid #0f0;  /* 'Cursor' lijntje */
+    
+    
+    /* De eigenlijke type-animatie, in twee delen:
+       1) typing: bouwt de breedte op in stappen (letter voor letter).
+       2) blink-caret: laat het lijntje knipperen. */
+    animation: typing 5s steps(40, end), blink-caret 0.8s step-end 8;
+  }
+  
+  /* De eigenlijke 'typen' animatie */
+  @keyframes typing {
+    from { 
+      width: 0; 
+    }
+    to { 
+      width: 40ch; /* hetzelfde als hierboven instellen */ 
+    }
+  }
+  
+  /* Cursor knipperen */
+  @keyframes blink-caret {
+    50% { border-color: transparent; }
+  }
