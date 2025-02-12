@@ -19,7 +19,7 @@ p {
     grid-template-columns: repeat(4,1fr);
     Grid-template-areas: 
             "a a a a b"
-            ". c d . .";
+            "d d d d d";
     justify-content: stretch;
     align-content: start; 
     width: 100%;
@@ -48,22 +48,25 @@ pre {
 }
 
 .ascii-art{
+    display: none;
     grid-area: c;
-    width: 100%;
+    width: 110px;
     justify-self: center;
 }
 .title{
-    align-self: start;
+    /*align-self: start;*/
     grid-area: d;
     max-width: 100%;
+    justify-self: center;
 }
+
 .TitelKlein {
     display: none; /* Verberg .TitelKlein standaard */
     grid-area: d;
     font-size: 200%;
 }
 nav {
-    display: flex;
+    display: grid;
     justify-content: center;
     font-size: x-large;
 }
@@ -205,8 +208,16 @@ a:active {
         margin-top: 15px;
         font-size: 150%;
     }
+    .LogoMenuGrid{
+        Grid-template-areas: 
+            "a a a a b"
+            "c d d d d";
+    }
     .title {
         display: none; /* Verberg het element bij schermbreedte kleiner dan 700px */
+    }
+    .ascii-art{
+        display: block;
     }
     .TitelKlein {
         display: block; /* Toon .TitelKlein bij schermen kleiner dan 700px */
